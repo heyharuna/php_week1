@@ -1,0 +1,12 @@
+body {
+    background: pink;
+    font-family: "futura";
+}
+h4 {
+    margin-top: 0;
+}
+.border {
+    border:solid 1px black;
+    padding: 10px;
+    margin-bottom: 20px;
+}
