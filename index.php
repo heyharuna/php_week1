@@ -11,7 +11,7 @@
             <h4>PHP</h4>
             <?php
                 class Person {
-                    protected $name;
+                    public $name;
                     protected $sex;
                     protected $age;
                     static $num = 1;
@@ -22,27 +22,24 @@
                         $this -> age = $age;
                     }
 
-                    public function showName() {
-                        return $this -> name;
-                        echo "I am ". $this -> name. "</br>";
-                    }
-
-                    public function showSex() {
-                        return $this -> sex;
-                    }
-
-                    public function showAge() {
-                        return $this -> age;
+                    public function showPerson() {
+                        static $num = 0;
+                        $num ++;
+                        echo $num. "</br>";
+                        echo "My name is " .$this -> name. " </br> I am " .$this -> sex. " </br> I am " .$this -> age. "years old </br></br>" ;
                     }
                 }
 
-                $haruna = new Person('Haruna', 'Female', '21');
-                $harunaName = $haruna -> showName();
-                $harunaSex = $haruna->showSex();
-                $harunaAge = $haruna->showAge();
-                echo "I am ". $harunaName. "</br>";
-                echo "I am ". $harunaSex. "</br>";
-                echo "I am ". $harunaAge. "years old</br>";
+                $haruna = new Person("Haruna", "Female", "21");
+                $haruna -> showPerson();
+                // $property = 'name';
+                // echo $haruna -> name;
+                // echo $haruna -> $property;
+
+                $tak = new Person("Takeshi", "Male", "25");
+                $tak -> showPerson();
+
+
             ?>
         </div>
 
